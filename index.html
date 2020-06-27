@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Assignment</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="row top-header">
+        <div class="container">
+            <div class="row">
+                <h1>JavaScript Assignment</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-div">
+        <h2>STRING METHODS</h2>
+
+
+        <p><ins>Task # 1</ins></p>
+        <p id="userName"></p>
+
+        <br>
+        <br>
+
+        <p><ins>Task # 2</ins></p>
+        <p id="mobileModel"></p>
+
+        <br>
+        <br>
+
+        <p><ins>Task # 3</ins></p>
+        <p id="stringPak"></p>
+
+
+        <br>
+        <br>
+
+        <p><ins>Task # 4</ins></p>
+        <p id="stringHello"></p>
+
+
+        <br>
+        <br>
+
+        <p><ins>Task # 5</ins></p>
+        <p id="stringPaki"></p>
+
+        <br>
+        <br>
+
+        <p><ins>Task # 6</ins></p>
+        <p id="userfullName"></p>
+
+        <br>
+        <br>
+
+        <p><ins>Task # 7</ins></p>
+        <p id="cityIslam"></p>
+
+
+        <br>
+        <br>
+
+        <p><ins>Task # 8</ins></p>
+        <p id="message"></p>
+
+
+        <br>
+        <br>
+
+        <p><ins>Task # 9</ins></p>
+        <p id="stringValue"></p>
+        <p id="numValue"></p>
+
+
+        <br>
+        <br>
+
+        <p><ins>Task # 10</ins></p>
+        <p id="upperCase"></p>
+
+
+        <br>
+        <br>
+
+        <p><ins>Task # 11</ins></p>
+        <p id="titleCase"></p>
+
+        <br>
+        <br>
+
+        <p><ins>Task # 12</ins></p>
+        <p id="stringConversion"></p>
+
+
+
+        <br>
+        <br>
+        <a href="conditional_statements.html">Continue to next chapter &#8594;</a>
+    </div>
+
+
+    <script>
+
+        // Task # 1
+        var firstName = prompt("Task # 1 \nEnter your first name!");
+        var lastName = prompt("Task # 1 \nEnter your last name!");
+        var fullName = firstName + " " + lastName;
+        document.getElementById("userName").innerHTML = "Greetings! <br/>Welcome to our site " + fullName + "! :)";
+
+
+
+        // Task # 2
+        var mobileModel = prompt("Task # 2 \nPlease enter your favorite mobile phone model!", "Apple iPhone 11 pro max");
+        var stringLenghth = mobileModel.length;
+        document.getElementById("mobileModel").innerHTML = "My favourite phone is: " + mobileModel + "<br/> Length of String: " + stringLenghth;
+
+
+
+        // Task # 3
+        var stringPak = "Pakistan";
+        var indexPak = stringPak.indexOf("n");
+        document.getElementById("stringPak").innerHTML = "String: " + stringPak + "<br/>Index of 'n': " + indexPak;
+
+
+
+        // Task # 4
+        var stringHello = "Hello World!";
+        var indexHello = stringHello.lastIndexOf("l");
+        document.getElementById("stringHello").innerHTML = "String: " + stringHello + "<br/>Index of 'l': " + indexHello;
+
+
+        // Task # 5
+        var stringPaki = "Pakistan!";
+        var indexPaki = stringPaki.charAt(3);
+        document.getElementById("stringPaki").innerHTML = "String: " + stringPaki + "<br/>Char at index '3': " + indexPaki;
+
+
+
+        // Task # 6
+        var userfirstName = prompt("Task # 6 \nEnter your first name!");
+        var userlastName = prompt("Task # 6 \nEnter your last name!");
+        var userfullName = userfirstName.concat(" " + userlastName);
+        document.getElementById("userfullName").innerHTML = "Greetings! <br/>Welcome to our site " + userfullName + "! :)";
+
+        // Task # 7
+        var cityHyder = "Hyderabad!";
+        var cityIslam = cityHyder.replace("Hyder", "Islam");
+        document.getElementById("cityIslam").innerHTML = "City: " + cityHyder + "<br/>After Replacement: " + cityIslam;
+
+
+
+        // Task # 8
+        var message = "Ali and Sami are best friends. They play cricket and football together.";
+        var newMessage = message.split("and").join("&");
+        document.getElementById("message").innerHTML = "Original message: <br/>" + message + "<br/><br/> Replaced message: <br/>" + newMessage;
+
+
+
+        // Task # 9
+        var stringValue = "472";
+        document.getElementById("stringValue").innerHTML = "Value: " + stringValue + "<br/>Type: " + typeof (stringValue);
+        var numValue = parseInt(stringValue);
+        document.getElementById("numValue").innerHTML = "Value: " + numValue + "<br/>Type: " + typeof (numValue);
+
+
+        // Task # 10
+        var userInput = prompt("Task # 10 \nEnter any Input! \nto display UpperCase!");
+        var upperCase = userInput.toUpperCase();
+        document.getElementById("upperCase").innerHTML = "User Input: " + userInput + "<br/>Upper Case: " + upperCase;
+
+        // Task # 11
+        function titleCase(string) {
+            var sentence = string.toLowerCase().split(" ");
+            for (var i = 0; i < sentence.length; i++) {
+                sentence[i] = sentence[i][0].toUpperCase() + sentence[i].slice(1);
+            }
+            var newSentence = sentence.join(" ");
+            return newSentence;
+        }
+        var userInput1 = prompt("Task # 11 \nEnter any Input! \nto display Title Case");
+        document.getElementById("titleCase").innerHTML = "User Input: " + userInput1 + "<br/>Title Case: " + titleCase(userInput1);
+
+
+
+        // Task # 12
+        var num = 35.36 ;
+        var stringConversion = num.toString().split(".");
+        var output = stringConversion.join("");
+        document.getElementById("stringConversion").innerHTML = "Number: " + num + "<br/>Result: " + output;
+
+
+
+        // Task # 13
+        var flag;
+        var userValue = prompt("Task # 13 \nEnter your Username!");
+        for(var i=0; i<=userValue.length - 1; i++)
+        {
+            if(userValue.charCodeAt(i) === 33 || userValue.charCodeAt(i) === 44 || userValue.charCodeAt(i) === 46 || userValue.charCodeAt(i) === 64)
+            {
+                flag = 1;
+                break;
+            }
+            else
+            {
+                flag = 0;
+            }
+        }
+        if(flag===0)
+        {
+            alert("Task # 13 \nHello " + userValue);
+        }
+        else if(flag === 1)
+        {
+            alert("Task # 13 \nPlease enter a valid username")
+        }
+
+
+        // Task # 14
+        var flag1;
+        var bakeitems = ["cake", "apple pie", "cookie", "chips", "patties"];
+        var userItem = prompt("Task # 14 \nWelcome to ABC Bakery! \nWhat do you want to order Sir/Ma'am?");
+        var flag1 = bakeitems.indexOf(userItem.toLowerCase());
+        if ((typeof flag1 !== 'undefined') && flag1 >= 0) {
+            alert("Task # 14 \n" + userItem + " is available at index " + flag1 + " in our bakery! :)");
+        }
+        else {
+            alert("Task # 14 \nWe are Sorry! :(\n" + userItem + " is not available in our bakery.");
+        }
+
+
+
+        // Task # 15
+        // var userPassword = prompt("Task # 15 \nEnter a Password!");
+        // for(var i = 0; i<= userPassword.length - 1; i++)
+        // {
+        //     if(userPassword[i].)
+        // }
+
+
+    </script>
+    <a href="MathExpressions.html" class="previous"> &#8592; Previous chapter</a>
+</body>
+
+</html>
